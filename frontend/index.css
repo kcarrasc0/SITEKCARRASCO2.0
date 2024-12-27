@@ -122,6 +122,7 @@ header {
   width: 100%;
   z-index: 1;
   background-color: black;
+  font-family:system-ui, -apple-system;
 }
 
 header .fa {
@@ -146,6 +147,7 @@ nav > ul a:hover {
 .header-profile-container {
   display: flex;
   align-items: center;
+  z-index: 1;
 }
 .header-profile-container .avatar-img {
   width: 3.3rem;
@@ -182,9 +184,6 @@ nav > ul a:hover {
   padding-top: 16.5rem !important;
   padding-bottom: 12rem !important;
   align-items: center;
-  display: grid;
-  grid-template-rows: auto auto auto;
-  row-gap: 50px;
   text-align: center;
   color: white;
 }
@@ -203,6 +202,17 @@ nav > ul a:hover {
   color: black;
   padding: 1.4rem 5rem;
   font-size: 1.1rem;
+  border-radius: 15px;
+}
+
+.image-container img {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
 }
 
 .btn:hover {
@@ -213,6 +223,10 @@ nav > ul a:hover {
 .section-about-me, .section-about-me-content> h2, h3
 .section-about-me, .section-about-me-content .subtitle {
   color: #fff;
+}
+
+.section-about-me > h2::after {
+  background: #fff;
 }
 
 /* section about me */
@@ -240,36 +254,32 @@ nav > ul a:hover {
   flex-wrap: wrap;
 }
 
+.section-about-me-content img {
+  width: 50%;
+  
+}
+
+/* ajusta os botões abaixo das skills*/
+.section-about-me-content ul a {
+  padding: 1rem 2rem;
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+  border-radius: 12px;
+  font-weight: 600;
+  margin-top: 30px;
+}
+
 .section-about-me-content ul > li {
   padding: 1rem 2rem;
   margin-bottom: 1rem;
   margin-right: 1rem;
   background: rgba(153, 153, 153, 0.2);
-  border-radius: 5px;
+  border-radius: 12px;
   font-weight: 600;
   color: #777;
 }
 
-/* Adicione este CSS ao seu arquivo styles/index.css */
-
-.contact-button-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-}
-
-.contact-button-container .btn {
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  border: none;
-  border-radius: 4px;
-}
-
+/*SECTION PROJECTS*/
 
 .section-projects {
   background-color: black;
@@ -280,6 +290,10 @@ nav > ul a:hover {
 .section-projects .subtitle,
 .section-projects h3 {
   color: #fff;
+}
+
+.section-projects > h2::after {
+  background: #fff;
 }
 
 .section-projects ul {
@@ -308,8 +322,13 @@ nav > ul a:hover {
   width: 100%;
 }
 
+.section-projects ul, li, .btn {
+  border-radius: 12px;
+}
 
-/* section contact */
+
+/* SECTION CONTACT */
+
 .section-contact {
   background: #19181C;
   background-position: center;
@@ -329,13 +348,14 @@ nav > ul a:hover {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   background: white;
   padding: 3rem;
-  border-radius: 5px;
+  border-radius: 25px;
   gap: 30px;
   display: flex;
   flex-direction: column;
   margin: 0px 10rem;
   margin-top: 5rem;
 }
+
 
 form > div {
   display: flex;
@@ -350,6 +370,7 @@ form label {
 }
 form button {
   align-self: flex-end;
+  border-radius: 15px;
 }
 
 form input,
@@ -360,11 +381,15 @@ textarea {
   border: 1px solid #ebebeb;
   letter-spacing: 0px;
   background: #f0f0f0;
-  border-radius: 5px;
+  border-radius: 14px;
   font-weight: 600;
 }
 
-/* footer */
+
+
+
+/* FOOTER */
+
 footer {
   background: #000;
   color: #fff;
@@ -453,10 +478,7 @@ footer {
   .section-contact textarea {
     color: #333;
   }
-  .section-contact button {
-    align-self: stretch;
-    font-size: 0.9rem;
-  }
+  
   footer {
     padding: 0px 1.6rem;
   }
